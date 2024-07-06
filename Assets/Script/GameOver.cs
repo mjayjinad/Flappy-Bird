@@ -5,13 +5,9 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject player, menu, pause, resume;
+    public GameObject player, menu, pause, resume, leaderboard;
     public SpawnManager spawnManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public PlayerScoreData playerScoreData;
 
    public void EndGame()
    {
@@ -23,6 +19,7 @@ public class GameOver : MonoBehaviour
         menu.SetActive(true);
         resume.SetActive(false);
         Debug.Log("game over");
+        playerScoreData.CallPostScore();
    }
 
     public void Resume()

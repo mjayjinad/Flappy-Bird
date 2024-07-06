@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public int score, scoreValue;
-    public Button pause, resume, restart, mainMenu;
+    public Button pause, resume, restart, mainMenu, leaderboard;
     public Text scoreText;
-    public GameObject menu;
+    public GameObject menu, leaderboardUI;
     private GameOver gameOver;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
         restart.onClick.AddListener(() => RestartGame());
         resume.onClick.AddListener(() => ResumeGame());
         mainMenu.onClick.AddListener(() => MainMenu());
+        leaderboard.onClick.AddListener(() => DisplayLeaderboard());
         Debug.Log(Time.timeScale);
     }
 
@@ -45,6 +46,11 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         menu.SetActive(false);
         pause.gameObject.SetActive(true);
+    }
+
+    void DisplayLeaderboard()
+    {
+       leaderboardUI.SetActive(true);
     }
 
     private void RestartGame()

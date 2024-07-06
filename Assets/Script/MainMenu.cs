@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Button start, quit;
+    public TMP_InputField playerName;
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class MainMenu : MonoBehaviour
     public void SartGame()
     {
         Debug.Log("Start");
+        PlayerPrefs.SetString("name", playerName.text);
         SceneManager.LoadScene("FlappyBird");
     }
 

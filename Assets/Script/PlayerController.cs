@@ -17,6 +17,5 @@ public class PlayerController : MonoBehaviour
     {
         jumpInput = Input.GetAxis("Jump");
         transform.Translate(Vector3.up * speed * Time.deltaTime * jumpInput);
-
     }
 }
