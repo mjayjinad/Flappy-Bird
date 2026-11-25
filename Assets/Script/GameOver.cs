@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
         menu.SetActive(true);
         resume.SetActive(false);
         Debug.Log("game over");
-        playerScoreData.CallPostScore();
+        //playerScoreData.CallPostScore();
    }
 
     public void Resume()

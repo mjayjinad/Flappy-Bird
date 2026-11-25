@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
 
     void DisplayLeaderboard()
     {
-       leaderboardUI.SetActive(true);
+       //leaderboardUI.SetActive(true);
     }
 
     private void RestartGame()
